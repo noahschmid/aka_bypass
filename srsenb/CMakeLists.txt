@@ -18,6 +18,10 @@
 # and at http://www.gnu.org/licenses/.
 #
 
+if(POLICY CMP0079 )
+  cmake_policy(SET CMP0079 NEW)
+endif()
+
 find_package(LibConfig REQUIRED)
 find_package(SCTP REQUIRED)
 

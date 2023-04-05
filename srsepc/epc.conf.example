@@ -12,7 +12,7 @@
 # mnc:              Mobile Network Code
 # full_net_name     Display Name of the Network
 # short_net_name    Short Display Name of the Network
-# apn:		          Set Access Point Name (APN)
+# apn:		        Set Access Point Name (APN)
 # mme_bind_addr:    IP bind addr to listen for eNB S1-MME connnections
 # dns_addr:         DNS server address for the UEs
 # encryption_algo:  Preferred encryption algorithm for NAS layer 
@@ -28,8 +28,8 @@
 mme_code = 0x1a
 mme_group = 0x0001
 tac = 0x0007
-mcc = 001
-mnc = 01
+mcc = 208
+mnc = 92
 mme_bind_addr = 127.0.1.100
 apn = srsapn
 dns_addr = 8.8.8.8
@@ -77,8 +77,8 @@ max_paging_queue = 100
 #
 ####################################################################
 [pcap]
-enable   = false
-filename = /tmp/epc.pcap
+enable   = true
+filename = /home/sh4d0/Documents/eth/semester-project/aka_bypass/epc.pcap
 
 ####################################################################
 # Log configuration
@@ -99,9 +99,9 @@ filename = /tmp/epc.pcap
 #           to print logs to standard output
 #####################################################################
 [log]
-all_level = info
+all_level = debug
 all_hex_limit = 32
-filename = /tmp/epc.log
+filename = /home/sh4d0/Documents/eth/semester-project/aka_bypass/epc.log
 
 #nas_level = debug
 #s1ap_level = debug

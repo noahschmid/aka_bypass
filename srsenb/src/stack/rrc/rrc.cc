@@ -292,7 +292,7 @@ void rrc::upd_user(uint16_t new_rnti, uint16_t old_rnti)
     logger.info("Resuming rnti=0x%x RRC connection due to received C-RNTI CE from rnti=0x%x.", old_rnti, new_rnti);
     if (ue_ptr->is_connected()) {
       // Send a new RRC Reconfiguration to overlay previous
-      old_it->second->send_connection_reconf();
+     // old_it->second->send_connection_reconf();
     }
   }
 
@@ -439,7 +439,7 @@ int rrc::notify_ue_erab_updates(uint16_t rnti, srsran::const_byte_span nas_pdu)
     logger.warning("Unrecognised rnti: 0x%x", rnti);
     return SRSRAN_ERROR;
   }
-  user_it->second->send_connection_reconf(nullptr, false, nas_pdu);
+  //user_it->second->send_connection_reconf(nullptr, false, nas_pdu);
   return SRSRAN_SUCCESS;
 }
 
@@ -588,7 +588,7 @@ void rrc::sgnb_addition_ack(uint16_t eutra_rnti, sgnb_addition_ack_params_t para
   ue_it->second->endc_handler->trigger(ue::rrc_endc::sgnb_add_req_ack_ev{params});
 
   // trigger RRC Reconfiguration to send NR config to UE
-  ue_it->second->send_connection_reconf();
+  //ue_it->second->send_connection_reconf();
 }
 
 void rrc::sgnb_addition_reject(uint16_t eutra_rnti)
