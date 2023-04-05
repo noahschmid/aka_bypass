@@ -1,3 +1,7 @@
+LTE AKA Bypass Attack
+=====================
+This repository contains a prototype implementation of an attack that bypass the NAS authentication and key agreement phase in the LTE protocol. It is based on the LTE implementation of the open source library srsRAN.
+
 srsRAN
 ======
 
